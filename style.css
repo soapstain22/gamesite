@@ -1,6 +1,13 @@
 * {
   box-sizing: border-box;
-  font-family: fantasy;
+  font-family:Arial, Helvetica, sans-serif;
+  text-shadow: 1cm;
+  text-justify: auto;
+  outline:5px;
+  border: 2px;
+  margin: 1px;
+  border-radius: 4px;
+  border-style: groove;
 }
 
 body {
@@ -10,31 +17,24 @@ body {
 
 /* Style the header */
 .header {
-  background-color: #f1f1f1;
   padding: 20px;
   text-align: center;
 }
 h1:hover {
   color:#21e;
-  
 }
 
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background: repeating-linear-gradient(0deg, #c4c4c4, #dcdcdc, #8b8b8b);  text-align: center;
+  
 }
 
 /* Style the topnav links */
 .topnav a {
   float: left;
-  display: block;
-  outline-width: 8px;
-  color: black;
-  outline-color: white;
-  background: repeating-linear-gradient(0deg, #c7c7c7, #6f6f6f 100%, #4d7079 1%);  text-align: center;
-  outline: auto;
-  padding: 14px 16px;
+  display: block;  /*background: repeating-linear-gradient(0deg, #c7c7c7, #6f6f6f 100%, #4d7079 1%);  text-align: center; */
+    /* padding: 14px 16px; */
   outline-offset: -2px;
   text-decoration: none;
 }
@@ -42,34 +42,45 @@ h1:hover {
 /* Change color on hover */
 .topnav a:hover {
   color: white;
-  background: repeating-linear-gradient(0deg, #c4c4c4, #dcdcdc, #8b8b8b);  text-align: center;
-
+ /*background: repeating-linear-gradient(0deg, #c4c4c4, #dcdcdc, #8b8b8b);  text-align: center;
+*/
 }
 
 /* Create three unequal columns that floats next to each other */
 .column {
-  float: right;
+  float: left;
   padding: 10px;
+  margin-left: auto;
+  align-self: center;
 }
 
 /* Left and right column */
 .column.side {
   width: 25%;
-  background-color: skyblue;
   outline-color: grey;
   outline-offset: 12px;
-  flex-grow: 1;
-  flex-direction: column;
-  flex-flow: column;
-  flex-wrap: nowrap ;
+  float: left;
 }
-
+.column.side.right {
+  float: right;
+}
+.column.side.left {
+  float: left;
+}
 /* Middle column */
 .column.middle {
   width: 50%;
 }
+.game{
+  content: url();
+}
 
 /* Clear floats after the columns */
+.row{
+  align-self: center;
+  border: 0;
+  margin: 0;
+}
 .row::after {
   content: "";
   display: table;
